@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'franklin gothic medium','arial narrow',sans-serif;
+  color: white;
+      font-size: 20px;
+  background: url('retro.jpg');
+  background-position: initial;
+  background-size: contain;
+  background-attachment: initial;
+}
+
+header {
+  background-color: white;
+  background: linear-gradient(45deg, darkred 20%, crimson, darkorange 60%, gold, bisque);
+  color: white;
+  padding: 20px 15px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+    transition: transform 0.3s ease;}
+nav ul li a:hover:before {
+  transform: scaleX(1);
+}
+
+section {
+  padding: 20px;
+}
+
+section h2 {
+  border-bottom: 2px solid #ffff00;
+}
+
+.product {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: gold;
+  color: white;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#movement {
+  animation: move 3s ease-in-out infinite;
+}
+#logotip {
+position: absolute;
+top: 40px;
+left: 40px;
+}
+
+.btn-up {
+  position: fixed;
+
+  background-color: #673ab7;
+
+  right: 20px;
+
+  bottom: 0;
+
+  border-top-left-radius: 8px;
+
+  border-top-right-radius: 8px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 60px;
+
+  height: 60px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("circle.png");
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #512da8;
+  }
+}
